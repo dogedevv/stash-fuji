@@ -1,0 +1,27 @@
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  owner: Bytes! # address
+  spender: Bytes! # address
+}
+
+type EventTransfer @entity {
+  id: ID!
+  emitter: Bytes!
+  transaction: Bytes!
+  timestamp: BigInt!
+  contract: Bytes!
+  value: BigInt!
+  valueExact: BigInt!
+  from: Bytes!
+  to: Bytes!
+}
+
+type Holder @entity {
+  id: ID!
+  balance: BigInt!
+  cummulativeBalance: BigInt!
+  totalEarned: BigInt!
+  lastTransferAtEpochTimestamp: BigInt!
+}
+
